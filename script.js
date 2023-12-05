@@ -7,10 +7,10 @@ fetch("https://restcountries.com/v3.1/all")
     return data.json()
 })
 .then((data)=>{
-    
+    console.log(data[7]);
     data.forEach(element => {
-        // console.log(element);
-        maintag.innerHTML += `<a href=https://restcountries.com/v3.1/name/${element.name.common} class="container">
+       
+        maintag.innerHTML += `<a href=index2.html/${element.name.common} class="container">
         <div class="flag-image">
             <img src= ${element.flags.svg} alt="">
         </div>

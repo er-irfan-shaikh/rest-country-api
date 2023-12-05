@@ -7,7 +7,7 @@ body{
     font-family:Nunito Sans,Arial, Helvetica, sans-serif;
 }
 .nav-bar{
-    padding: 2rem;
+    padding: 2rem 3rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .wrapper{
@@ -25,3 +25,73 @@ body{
 .dark-mode img {
     vertical-align:  middle;
 }
+
+.back , .border a {
+    padding: 5px 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: max-content;
+    margin-bottom: 3rem;
+}
+.back i {
+  margin-right: 0.5rem;
+}
+.back span{
+    font-family:Nunito Sans,Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+.single-country{
+    padding: 3rem;
+    /* background-color: red; */
+  
+}
+.single-country-container{
+  display: flex;
+ align-items: center;
+ /* justify-content: center; */
+  gap: 3rem;
+
+  /* justify-content: space-between; */
+}
+
+.big-flag{
+    width:100%;
+    max-width : 500px;
+    
+
+}
+.big-flag img{
+    width:100%;
+}
+.country-info{
+    padding: 3rem;
+}
+.country-info h2{
+    font-family:Nunito Sans,Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.information{
+    display: flex;
+    /* gap: 1rem; */
+ 
+}
+.information p {
+    font-family:Nunito Sans,Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+#border{
+    margin-top: 3rem;
+}
+#border a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px;
+    width: max-content;
+    margin-right: 0.5rem;
+
+}
+
+
+https://restcountries.com/v3.1/name/${element.name.common}
