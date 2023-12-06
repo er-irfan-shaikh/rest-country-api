@@ -9,8 +9,10 @@ fetch("https://restcountries.com/v3.1/all")
 .then((data)=>{
     console.log(data[7]);
     data.forEach(element => {
+
        
-        maintag.innerHTML += `<a href=index2.html/${element.name.common} class="container">
+        maintag.innerHTML += `<a href= "/index2.html?name=${element.name.common}" class="container">
+      
         <div class="flag-image">
             <img src= ${element.flags.svg} alt="">
         </div>
@@ -23,5 +25,6 @@ fetch("https://restcountries.com/v3.1/all")
              </div>
         </div>
     </a>`
+    
     });
 })
