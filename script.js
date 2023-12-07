@@ -1,13 +1,32 @@
 const maintag = document.querySelector("main")
 const container = document.querySelector(".container")
+const filte = document.querySelector("#filter")
+let filtervalue = ""
 
+filte.addEventListener("change",(e)=>{
+    filtervalue =  filte.value
+    console.log(filtervalue);
+    if(filtervalue == ""){
+        maintag.innerHTML = ""
+        fetchdata(filtervalue)
+    }
+   else{
+       
+        fetchdata(filtervalue)
+        maintag.innerHTML = ""
+   }
+   
+})
+console.log(filtervalue);
 
-fetch("https://restcountries.com/v3.1/all")
+function fetchdata(value){ 
+    fetch(`https://restcountries.com/v3.1/${ value || "all"   }`) 
 .then((data)=>{
     return data.json()
 })
 .then((data)=>{
-    console.log(data[7]);
+    
+    console.log(data);
     data.forEach(element => {
 
        
@@ -28,3 +47,13 @@ fetch("https://restcountries.com/v3.1/all")
     
     });
 })
+  }
+  function initialFetch() {
+    if(filtervalue == ""){
+        filtervalue =""
+        fetchdata(filtervalue)
+    }
+   
+}
+
+initialFetch()

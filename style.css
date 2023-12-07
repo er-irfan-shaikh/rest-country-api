@@ -7,7 +7,7 @@
 body{
     font-family:Nunito Sans,Arial, Helvetica, sans-serif;
 }
-.nav-bar{
+.nav-bar  {
     padding: 2rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -61,4 +61,8 @@ main{
 .countory-detail{
     padding: 1rem;
     margin-bottom: 2rem;
+}
+#filter , .label{
+    margin-top: 3rem;
+    margin-left: 3rem;
 }
