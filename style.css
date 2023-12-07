@@ -37,7 +37,7 @@ main{
 .container{
     width: 100%;
     max-width: 220px;
-    height: 350px;
+    height: 320px;
     text-decoration: none;
     color: black;
     border-radius: 0.5rem;
@@ -62,7 +62,13 @@ main{
     padding: 1rem;
     margin-bottom: 2rem;
 }
-#filter , .label{
+ .label{
     margin-top: 3rem;
-    margin-left: 3rem;
+    
+}
+.SF{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 2rem;
+    margin-block: 2rem;
 }

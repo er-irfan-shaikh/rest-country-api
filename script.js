@@ -1,17 +1,35 @@
 const maintag = document.querySelector("main")
 const container = document.querySelector(".container")
 const filte = document.querySelector("#filter")
+const input = document.querySelector(".searchbar input")
 let filtervalue = ""
+
+input.addEventListener("blur",()=>{
+    filtervalue =  input.value
+    console.log(filtervalue);
+    if(filtervalue === ""){
+        
+        maintag.innerHTML = ""
+        fetchdata(filtervalue)
+    }
+   else{
+    // filte.value = "ALL"
+    fetchdata(`name/${filtervalue}`)
+        maintag.innerHTML = ""
+   }
+   
+})
 
 filte.addEventListener("change",(e)=>{
     filtervalue =  filte.value
     console.log(filtervalue);
     if(filtervalue == ""){
+        filte.value = "ALL"
         maintag.innerHTML = ""
         fetchdata(filtervalue)
     }
    else{
-       
+    
         fetchdata(filtervalue)
         maintag.innerHTML = ""
    }
